@@ -6,12 +6,91 @@
       name="description"
       content="Access your account securely. Enter your credentials to log in and enjoy our services. Don't have an account? Sign up today"
     />
-    <meta name="robots" content="index" />
+    <meta name="robots" content="noindex, nofollow" />
     <meta http-equiv="content-language" content="en-us" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="MOHI UDDIN AKBAR" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon_package_v0.16/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon_package_v0.16/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon_package_v0.16/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon_package_v0.16/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/favicon_package_v0.16/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <title>Login page</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <section class="form-section">
+        <form>
+          <div class="login-with-google">
+            <img src="./Icons/google.svg" alt="Google Icon" />
+            <strong>Log in with Google</strong>
+          </div>
+          <small>or</small>
+          <div class="login-with-email-password">
+            <div class="email">
+              <label for="email">Email</label>
+              <input type="text" id="email" required />
+            </div>
+            <div class="password">
+              <label for="password">Password</label>
+              <input type="text" id="password" required />
+            </div>
+          </div>
+          <div class="additional-info">
+            <div class="reminder">
+              <input type="checkbox" id="remember" aria-label="Remember me" />
+              <label for="remember">Remember me</label>
+            </div>
+            <a href="#">Forgot Password?</a>
+          </div>
+          <button type="submit">Log in</button>
+        </form>
+        <a href="#">Don't have an account? <span>Sign up</span></a>
+      </section>
+      <section class="web-information">
+        <div class="development">
+          <img src="./Icons/development.svg" alt="Development features" />
+          <p>
+            A modern and clean design system for developing fast and powerful
+            web interfaces.
+          </p>
+        </div>
+        <div class="feature">
+          <img src="./Icons/feature.svg" alt="Additional features" />
+          <p>
+            A modern and clean design system for developing fast and powerful
+            web interfaces.
+          </p>
+        </div>
+        <div class="update">
+          <img src="./Icons/update.svg" alt="Updates" />
+          <p>
+            A modern and clean design system for developing fast and powerful
+            web interfaces.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
