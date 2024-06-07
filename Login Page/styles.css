@@ -1,5 +1,274 @@
+:root {
+  --bg-color: white;
+  --primary-color: #1f2633;
+  --secondary-color: rgb(34, 34, 236);
+  --icon-color: rgb(65, 65, 232);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  max-width: 1200px;
+  height: 100dvh;
+  background-color: var(--bg-color);
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+}
+
+body main {
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 2px;
+  column-gap: 50px;
+  padding: 1rem;
+  border: 2px solid var(--primary-color);
+}
+
+body main .form-section {
+  flex-basis: 40%;
+  margin: 0 auto;
+}
+
+body main .form-section form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+body main .form-section form .login-with-google {
+  width: 100%;
+  margin: 5px auto;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 0.18rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+body main .form-section form .login-with-google > img {
+  place-self: end;
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  padding: 0.2rem;
+}
+
+body main .form-section form .login-with-google > strong {
+  text-align: start;
+  display: grid;
+  align-items: center;
+  padding-left: 0.3rem;
+  font-family: "Satoshi", sans-serif;
+  color: var(--primary-color);
+}
+
+body main .form-section form small {
+  font-size: 15px;
+  text-align: center;
+  padding: 0.3rem;
+  margin: 5px auto;
+  margin-top: 20px;
+}
+
+body main .form-section form .login-with-email-password {
+  display: grid;
+  width: 100%;
+  row-gap: 20px;
+  align-content: center;
+}
+
+body main .form-section form .login-with-email-password div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+body main .form-section form .login-with-email-password div label {
+  margin-top: 10px;
+  margin-bottom: 3px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: bold;
+}
+
+body main .form-section form .login-with-email-password div input[type="text"] {
+  outline: none;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  padding: 0.4rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+}
+
+body main .form-section form .additional-info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 7px auto;
+  padding-right: 0.3rem;
+}
+
+body main .form-section form .additional-info .reminder {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 6fr;
+  justify-items: start;
+}
+
+body main .form-section form .additional-info .reminder label {
+  font-size: 12px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-left: 5px;
+}
+
+body main .form-section form .additional-info .reminder #remember {
+  color: #1f2633;
+}
+
+body main .form-section form .additional-info a {
+  font-size: 12px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: bolder;
+  color: #4278f6;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body main .form-section form button {
+  padding: 0.5rem 0.3rem;
+  width: 100%;
+  font-size: 20px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: bolder;
+  border-radius: 2px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+body main .form-section form + a {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  font-size: 12px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 600;
+  width: 100%;
+  text-decoration: none;
+  color: var(--primary-color);
+  margin-top: 55px;
+  margin-bottom: 25px;
+}
+
+body main .form-section form + a > span {
+  margin-left: 3px;
+  color: #3d77ff;
+}
+
+main .web-information {
+  flex-basis: 50%;
+  display: none;
+  place-items: center;
+  row-gap: 70px;
+  margin-top: -27px;
+}
+
+main .web-information :where(.development, .feature, .update) {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main .web-information :where(.development, .feature, .update) img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  padding: 0.2rem;
+  color: #3d77ff;
+  align-self: flex-start;
+  margin-top: 3px;
+  margin-right: 5px;
+}
+main .web-information :where(.development, .feature, .update) div {
+  margin-left: 2px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+main .web-information :where(.development, .feature, .update) div > h2 {
+  color: var(--primary-color);
+  font-size: 22px;
+  padding: 0;
+  margin: 0;
+  width: fit-content;
+  font-family: "Satoshi", sans-serif;
+  padding-left: 0.2rem;
+  margin-bottom: 5px;
+}
+
+main .web-information :where(.development, .feature, .update) div > p {
+  line-height: 20px;
+  font-family: "Satoshi", sans-serif;
+  color: #636871;
+  text-align: left;
+  font-weight: 500;
+  padding-left: 0.2rem;
+}
+
+@media screen and (max-width: 1023px) {
+  body main {
+    width: 60%;
+  }
+  body main .form-section {
+    flex-basis: 45%;
+  }
+  main .web-information {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body main {
+    width: 60%;
+  }
+  body main .form-section {
+    flex-basis: 85%;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body main {
+    width: 90%;
+  }
+  body main .form-section {
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main .web-information {
+    display: grid;
+  }
 }
