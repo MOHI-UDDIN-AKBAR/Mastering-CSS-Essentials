@@ -1,21 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
 @font-face {
   font-family: Bosch;
   src: url(Bosch-Display-Font/Bosch-Display-Font/OTF-File/Bosch.otf);
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
-
 :root {
-  --hero-section-secondary-bg-color: #151515;
+  --bg-color: #151515;
   --primary-text-color: #171616;
   --secondary-text-color: rgb(243, 241, 241);
   --background-color: #d3956b;
   --light-background-color: rgb(246, 244, 244);
 }
 
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -47,7 +49,7 @@ main .hero-section::before {
   left: 0;
   width: 400px;
   height: 100vh;
-  background-color: var(--hero-section-secondary-bg-color);
+  background-color: var(--bg-color);
 }
 
 .image-of-hero-section {
@@ -56,10 +58,25 @@ main .hero-section::before {
   align-self: flex-start;
   height: 100%;
 }
+
 .image-of-hero-section img {
   width: 450px;
   height: 100%;
   object-fit: cover;
+  animation: riseImage 2s linear forwards;
+  visibility: hidden;
+  animation-delay: 1s;
+}
+
+@keyframes riseImage {
+  0% {
+    visibility: visible;
+    height: 0%;
+  }
+  100% {
+    visibility: visible;
+    height: 100%;
+  }
 }
 
 main .hero-section h1 {
@@ -70,16 +87,28 @@ main .hero-section h1 {
   top: 180px;
   font-family: Bosch;
   font-size: 100px;
-  background: linear-gradient(
-    to right,
-    white 57.9%,
-    var(--hero-section-secondary-bg-color) 0%
-  );
+  background: linear-gradient(to right, white 57.9%, var(--bg-color) 0%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  visibility: hidden;
+  animation: text-opacity-animation 2s linear forwards;
+  animation-delay: 3.5s;
 }
 
+@keyframes text-opacity-animation {
+  0% {
+    visibility: visible;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
 aside {
   display: flex;
   flex-direction: column;
@@ -95,7 +124,7 @@ aside {
 }
 
 aside p {
-  color: var(--hero-section-secondary-bg-color);
+  color: var(--bg-color);
   font-size: 16px;
   text-align: left;
   padding: 5px;
@@ -122,13 +151,12 @@ aside div button {
   font-weight: bolder;
   border: none;
   color: white;
-  background-color: var(--hero-section-secondary-bg-color);
+  background-color: var(--bg-color);
 }
 
 aside div img {
   flex-basis: 25%;
   object-fit: contain;
-  color: white;
   background-color: var(--background-color);
   height: 100%;
   cursor: pointer;
@@ -171,7 +199,7 @@ main .art-gallery-section .gallery-about-info .gallery-description-text h2 {
   font-weight: bold;
   font-size: 35px;
   line-height: 40px;
-  color: var(--hero-section-secondary-bg-color);
+  color: var(--bg-color);
   font-style: normal;
   text-align: center;
   width: 60%;
@@ -236,7 +264,7 @@ main .artworks-display > div .inspiration-invitation {
   row-gap: 10px;
   padding: 0rem 0.5rem;
   margin-top: 20px;
-  background-color: var(--hero-section-secondary-bg-color);
+  background-color: var(--bg-color);
 }
 
 main .artworks-display > div .inspiration-invitation > h3 {
@@ -260,7 +288,7 @@ main .artworks-display > div .inspiration-invitation > p {
 
 footer {
   width: 100%;
-  background-color: var(--hero-section-secondary-bg-color);
+  background-color: var(--bg-color);
   color: var(--light-background-color);
   padding: 3rem 1rem;
   display: flex;
@@ -332,7 +360,9 @@ footer .social-icons img {
     font-family: Bosch;
     font-size: 60px;
     max-width: 500px;
-    color: var(--hero-section-secondary-bg-color);
+    color: var(--bg-color);
+    animation: none !important;
+    visibility: visible;
   }
 
   aside {
@@ -374,6 +404,8 @@ footer .social-icons img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    visibility: visible;
+    animation: none !important;
   }
 
   main .hero-section h1 {
@@ -383,7 +415,7 @@ footer .social-icons img {
     margin: 10px 0;
     margin-top: 50px;
     margin-left: 10px;
-    color: var(--hero-section-secondary-bg-color);
+    color: var(--bg-color);
   }
 
   aside {
