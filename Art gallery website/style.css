@@ -449,6 +449,7 @@ footer .social-icons img {
     height: fit-content;
     flex-direction: column;
     column-gap: 0px;
+    margin-bottom: 40px;
   }
 
   main .artworks-display > img {
@@ -472,6 +473,7 @@ footer .social-icons img {
     width: 90%;
     padding: 1rem 1.2rem;
     margin: 20px auto;
+    margin-bottom: 0;
   }
 
   main .artworks-display > div .inspiration-invitation > p {
