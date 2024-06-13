@@ -28,14 +28,14 @@ body {
 }
 
 main .hero-section {
-  /* display: flex; */
+  display: flex;
   position: relative;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
   max-width: 100%;
   height: 100vh;
-  display: none;
+  /* display: none; */
 }
 
 main .hero-section::before {
@@ -138,7 +138,7 @@ img {
 
 main .art-gallery-section {
   max-width: 1000px;
-  border: 3px solid red;
+  /* border: 3px solid red; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -198,52 +198,58 @@ main .art-gallery-section .gallery-about-info img {
 }
 
 main .artworks-display {
+  height: 400px;
   width: 100%;
-  border: 4px solid red;
+  /* border: 4px solid red; */
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-around;
-  align-content: center;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
   margin-bottom: 100px;
-  /* column-gap: 20px; */
+  column-gap: 20px;
 }
 
 main .artworks-display > img {
+  padding: 1rem 0;
   width: 400px;
-  height: 300px;
+  height: 400px;
   object-fit: cover;
 }
 
 main .artworks-display > div {
-  flex-basis: 40%;
+  /* flex-basis: 40%; */
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 1rem 0;
+  /* border: 5px solid red; */
 }
 
 main .artworks-display > div img {
   /* width: 100%; */
-  width: 250px;
-  height: 150px;
+  width: 300px;
+  height: 50%;
   object-fit: cover;
-  border: 3px solid red;
+  /* border: 3px solid red; */
 }
 
 main .artworks-display > div .inspiration-invitation {
-  border: 2px solid red;
+  width: 300px;
+  height: 50%;
+  /* border: 2px solid red; */
   display: flex;
   flex-direction: column;
   row-gap: 10px;
-  padding: 0.5rem;
+  padding: 0rem 0.5rem;
   margin-top: 20px;
   background-color: var(--hero-section-secondary-bg-color);
 }
 
 main .artworks-display > div .inspiration-invitation > h3 {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   font-family: bosch;
   font-weight: bolder;
   text-transform: uppercase;
@@ -251,12 +257,16 @@ main .artworks-display > div .inspiration-invitation > h3 {
   padding: 0.2rem;
   font-size: 24px;
   color: white;
+  margin: 20px;
 }
 
 main .artworks-display > div .inspiration-invitation > p {
+  width: 100%;
   color: rgb(243, 241, 241);
-  padding: 0.5rem;
   font-size: 16px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  /* border: 4px solid green; */
 }
 
 /* Tablet version */
@@ -274,7 +284,7 @@ main .artworks-display > div .inspiration-invitation > p {
     width: 100%;
     display: flex;
     height: 100vh;
-    display: none;
+    /* display: none; */
   }
 
   main .hero-section::before {
@@ -374,5 +384,150 @@ main .artworks-display > div .inspiration-invitation > p {
   aside div img {
     flex-basis: 20%;
     object-fit: contain;
+  }
+
+  main .art-gallery-section {
+    max-width: 1000px;
+    /* border: 3px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  main .art-gallery-section .gallery-about-info {
+    /* border: 4px solid green; */
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 15px auto;
+    /* border: 4px solid; */
+    margin-bottom: 30px;
+  }
+
+  main .art-gallery-section .gallery-about-info .gallery-description-text {
+    /* border: 4px solid blue; */
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  main .art-gallery-section .gallery-about-info .gallery-description-text h2 {
+    width: 100%;
+    text-transform: uppercase;
+    font-family: Bosch;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 40px;
+    color: var(--hero-section-secondary-bg-color);
+    font-style: normal;
+    text-align: left;
+    /* border: 2px solid red; */
+    /* width: 60%; */
+    margin-left: 0%;
+    padding: 0.5rem;
+  }
+
+  main .art-gallery-section .gallery-about-info .gallery-description-text p {
+    width: 100%;
+    padding: 0.4rem 0.5rem;
+    /* border: 2px solid red; */
+    margin-left: 0%;
+    text-align: left;
+    line-height: 23px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #171616;
+  }
+
+  main .art-gallery-section .gallery-about-info img {
+    /* border: 4px solid gold; */
+    flex-basis: 100%;
+    width: 90%;
+    object-fit: cover;
+    margin: 5px auto;
+  }
+
+  main .artworks-display {
+    height: fit-content;
+    width: 100%;
+    /* border: 4px solid red; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 100px;
+    column-gap: 0px;
+  }
+
+  main .artworks-display > img {
+    padding: 1rem 0;
+    width: 90%;
+    height: 400px;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+
+  main .artworks-display > div {
+    /* flex-basis: 40%; */
+    /* height: 100%; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem 0;
+    /* border: 2px solid red; */
+    /* margin: 0 auto; */
+  }
+
+  main .artworks-display > div img {
+    width: 90%;
+    padding: 1rem 0;
+    /* width: 300px; */
+    /* height: 50%; */
+    object-fit: cover;
+    /* border: 3px solid red; */
+  }
+
+  main .artworks-display > div .inspiration-invitation {
+    width: 90%;
+    /* height: 50%; */
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 1rem 1.2rem;
+    margin: 20px auto;
+    background-color: var(--hero-section-secondary-bg-color);
+  }
+
+  main .artworks-display > div .inspiration-invitation > h3 {
+    /* border: 2px solid red; */
+    font-family: bosch;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0.2rem;
+    font-size: 24px;
+    color: white;
+    margin: 20px;
+  }
+
+  main .artworks-display > div .inspiration-invitation > p {
+    width: 100%;
+    color: rgb(243, 241, 241);
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    /* border: 4px solid green; */
   }
 }
