@@ -163,9 +163,7 @@ There are six ways to specify colors in CSS:
 
 - **Grow**: `flex-grow: 1;`, `2;`, `any number;`
 
-- **Basis**: `flex-basis: %;
-
-`, `px;`, `rem;`
+- **Basis**: `flex-basis:`, ` %`, `px;`, `rem;`
 
 - **Shrink**: `flex-shrink: 1;`, `2;`, `any number;`
 
@@ -191,11 +189,39 @@ There are six ways to specify colors in CSS:
 
 - **Align Self**: `align-self: flex-start;`, `center;`, `baseline;`, `stretch;`
 
+---
+
 ## Pseudo-classes and Pseudo-elements
 
-- **Pseudo-class**: `a: hover;`, `active;`, `focus;`, `visited;`, `first-child;`, `last-child;`, `nth-child(even);`, `odd;`, `nth-last-child(2);`, `only-child;`, `not(p);`
+### Input Pseudo-class
 
-- **Pseudo-element**: `::first-line;`, `first-letter;`, `::before;`, `after;`, `::selection;`
+- `:autofill`, `:enabled`, `:disabled`, `:read-only`, `:read-write`, `:placeholder-shown`, `:checked`, `:interminate`, `:valid`, `:invalid`, `:required`, `:optional`, `:in-range`, `:out-of-range`
+
+### Linguistic Pseudo-class
+
+- `:dir(ltr,rtl)`, `:lang(en-us)`
+
+### Location Pseudo-class
+
+- `:link`, `:visited`, `:target`
+
+### Tree Structure Pseudo-class
+
+- `:root`, `:empty`, `:first-child`, `:last-child`, `:nth-child(n)`, `:nth-last-child(n)`, `:only-child`, `:first-of-type`, `:last-of-type`, `:nth-of-type()`, `:nth-last-of-type()`, `:only-of-type`
+
+### User Action Pseudo-class
+
+- `:hover`, `:action`, `:focus`
+
+### Functional Pseudo-class
+
+- `:not()`, `:is()`, `:where()`, `:has()`
+
+### Pseudo-elements
+
+- `::first-line`, `::first-letter`, `::after`, `::before`, `::cue`, `::placeholder`, `::selection`
+
+---
 
 ## Positioning
 
@@ -232,8 +258,3 @@ There are six ways to specify colors in CSS:
 ## Conclusion
 
 CSS is a powerful tool for designing web pages, offering numerous properties and techniques for styling elements. Mastering CSS enables developers to create visually appealing and responsive web interfaces.
-
-```
-
-This markdown document organizes your CSS documentation into sections and sub-sections, making it easier to navigate and understand the different aspects of CSS styling. Adjustments have been made for consistency and completeness across various topics covered.
-```
