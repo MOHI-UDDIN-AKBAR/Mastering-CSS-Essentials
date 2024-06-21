@@ -145,6 +145,9 @@ There are six ways to specify colors in CSS:
 
 - **Animation**: `animation-name: slideIn;`, `animation-delay: 3s;`, `animation-duration: 2s;`, `animation-timing-function: linear;`, `ease-in;`, `ease-out;`, `ease-in-out;`, `cubic-bezier(0.25, 0.1, 0, 25, 1);`, `animation-iteration-count: infinite;`, `animation-play-state: paused;`, `running;`, `animation-fill-mode: none;`, `forward;`, `backward;`, `both;`, `animation-direction: normal;`, `reverse;`, `alternate;`, `alternate-reverse;`
 
+  ## Will-Change
+  -**will-change**: ` animation `,  ` transition `, ` opacity `, ` and so on`
+
 ## Filters
 
 - **Filter**: `filter: blur(2px);`, `brightness(200%);`, `drop-shadow(0px 0px 2px red);`, `grayscale(100%);`, `opacity(20%);`, `none`
@@ -173,21 +176,64 @@ There are six ways to specify colors in CSS:
 
 - **Align Content**: `align-content: flex-start;`, `center;`, `space-around;`, `space-between;`
 
-## Grid
-
-- **Grid Container**: `display: grid;`, `inline-grid;`
-
-- **Grid Columns**: `grid-template-columns: 1fr 1fr 1fr;`, `2fr 1fr;`, `auto;`, `10% 20%;`, `px;`, `rem;`
-
-- **Grid Rows**: `grid-template-rows: 100px 200px 300px;`, `50% 100%;`, `auto;`, `px;`, `rem;`
-
-- **Grid Gaps**: `grid-column-gap: 10px;`, `grid-row-gap: 10px;`, `gap: 10px;`, `0px 10px;`
-
-- **Grid Lines**: `grid-column-start: 1;`, `grid-column-end: 3;`, `span 3;`, `auto;`, `1;`, `grid-row-start: 1;`, `grid-row-end: 3;`, `span 3;`, `auto;`, `1;`
-
-- **Grid Areas**: `grid-template-areas: "header header header" "content content sidebar" "footer footer footer";`
-
 - **Align Self**: `align-self: flex-start;`, `center;`, `baseline;`, `stretch;`
+
+---
+
+## Grid Layout
+
+### Grid Template Columns
+
+- `grid-template-columns: 100px 100px;` means 2 columns; can also use `px`, `%`, `rem`, `em`, `fr`, `minmax(min-width-value, max-width-value)`, `repeat(how many column, width of each column))`
+
+### Grid Template Rows
+
+- `grid-template-rows: 100px 200px;` means 2 rows; can also use `px`, `%`, `rem`, `em`, `fr`, `minmax(min-width-value, max-width-value)`, `repeat(how many row, width of each row))`
+
+### Grid Template Areas
+
+- `grid-template-areas: "a b c d";` means 4 columns;
+- `grid-template-areas: "header header header", "menu main aside", "menu footer footer";` means 3 columns and 3 rows;
+
+### Grid Area Placement
+
+- `grid-area: header;` or name of the item;
+
+### Spanning Grid Items
+
+- `grid-column: start/end;`
+- `grid-row: start/end;`
+- `grid-column-start: column number;`
+- `grid-row-start: row number;`
+- `grid-column-end: column number;`
+- `grid-row-end: row number;`
+- `grid-auto-column: 200px 50px;`
+- `grid-auto-row: 100px 50px;`
+- `grid-auto-flow: row, column, dense;`
+
+### Justify Content, Items, and Self
+
+- `justify-content: flex-start;`, `start;`, `flex-end;`, `end;`, `center;`, `space-around;`, `space-between;`, `space-evenly;`
+- `justify-items: flex-start;`, `start;`, `flex-end;`, `end;`, `center`, `baseline;`, `stretch;`
+- `justify-self: flex-start;`, `start;`, `flex-end;`, `end;`, `center;`, `baseline;`, `stretch;`
+
+### Align Content, Items, and Self
+
+- `align-content: flex-start;`, `start;`, `flex-end;`, `end;`, `center;`, `space-around;`, `space-between;`, `space-evenly;`
+- `align-items: flex-start;`, `start;`, `flex-end;`, `end;`, `center;`, `baseline;`, `stretch;`
+- `align-self: flex-start;`, `start;`, `flex-end;`, `end;`, `center;`, `baseline;`, `stretch;`
+
+### Place Content, Items, and Self
+
+- `place-content: flex-start;`, `start;`, `flex-end;`, `end;`, `center;`, `space-around;`, `space-between;`, `space-evenly;`
+- `place-items: flex-start;`, `start;`, `flex-end;`, `end;`, `center;`, `baseline;`, `stretch;`
+- `place-self: flex-start;`, `start;`, `flex-end;`, `end;`, `center;`, `baseline;`, `stretch;`
+
+### Column Gap, Row Gap, and Gap/Grid Gap
+
+- `column-gap: 5px;`
+- `row-gap: 5px;`
+- `gap/grid-gap: 5px;`
 
 ---
 
@@ -223,6 +269,34 @@ There are six ways to specify colors in CSS:
 
 ---
 
+## CSS Selectors
+
+### Simple Selectors
+
+- **Element Type Selectors**: `p {color:red;}`
+- **Class Selectors**: `.container {color:red;}`
+- **ID Selectors**: `#img {padding:5px;}`
+- **Universal Selectors**: `*{padding:0;}`
+- **Element Type and Class Selectors**: `p.into {padding:5px;}`
+- **Multiple Element Type Selectors**: `h1, a, p {padding:5px;}`
+
+### Attribute Selectors
+
+- **Attribute Existence Selector**: `input[required] {color:red;}`
+- **Attribute Value Selector**: `input[href="https://example.com"] {color:red;}`
+- **Attribute Value Start Selector**: `input[href^="https"] {color:red;}`
+- **Attribute Value End Selector**: `input[href$="com"] {color:red;}`
+- **Attribute Value Contain Selector**: `input[href*="google"] {color:red;}`
+
+### Combinator Selectors
+
+- **Descendant Selectors**: `section div p {color: red;}`
+- **Child Selectors**: `div > p {color: red;}`
+- **Adjacent Sibling Selectors**: `h1 + p {color: red;}`
+- **General Sibling Selectors**: `h1 ~ p {color: red;}`
+
+---
+
 ## Positioning
 
 - **Position**: `position: static;`, `relative;`, `absolute;`, `fixed;`, `sticky;`
@@ -234,6 +308,10 @@ There are six ways to specify colors in CSS:
 - **Bottom**: `bottom: 50px;`, `px;`, `%;`, `auto;`
 
 - **Left**: `left: 50px;`, `px;`, `%;`, `auto;`
+
+## Overflow Property
+
+-**Overflow**: The `overflow` property controls what happens when content overflows its box. It can be set to `hidden`, `visible`, `scroll`, or `auto`.
 
 ## Responsive Design
 
@@ -254,6 +332,12 @@ There are six ways to specify colors in CSS:
 - **Variable**: `--mycolor: blue;`, `white;`, `border;`
 
 - **Usage**: `color: var(--mycolor);`, `background: var(--mycolor);`
+
+## OtherCss
+-**Z-index**: ` 1 or any number; `
+-**Box-sizing**: ` border-box; `
+-**Caret-color**: ` red ;`
+-**unicode-bidi**: ` bidi-overide;  `
 
 ## Conclusion
 
